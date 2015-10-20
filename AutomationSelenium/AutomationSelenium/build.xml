@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<project name="Medscape" basedir="." default="run">
+	
+    <property name="ws.home" value="${basedir}"/>	
+    <property name="build.dir" value="${ws.home}/bin"/>
+	<property name="jar.dir" value="${ws.home}/lib"/>
+	<property name="classes.dir" value="${build.dir}"/>
+    <property name="src.dir" value="${ws.home}/src"/>
+	<property name="properties.dir" value="${ws.home}/properties"/>
+	<property name="main-class"  value="com.javalan.sample.medscape"/>
+
+
+   <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${ws.home.dir}"/>
+        <delete dir="${framework.dir}"/>
+     	<delete dir="${bin.dir}"/>
+  
+    </target>
+
+	
+	<property name="lib.dir"     value="${ws.home}/lib"/>
+
+    <path id="classpath">
+        <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    </path>
+	
+    <target name="compile" depends="clean">
+        <mkdir dir="${classes.dir}"/>
+        <javac includeantruntime="true" srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath" source="1.6" target="1.6" compiler="javac1.6"/>
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="${jar.dir}"/>
+        <jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main-class}"/>
+            </manifest>
+        </jar>
+    </target>
+	
+    <target name="run" depends="jar">
+        <java fork="true" classname="${main-class}">
+            <classpath>
+                <path refid="classpath"/>
+                <path location="${jar.dir}/${ant.project.name}.jar"/>
+            	
+            </classpath>
+        </java>
+    	
+    </target>
+    	
+		
+</project>
+ 
+
+    	

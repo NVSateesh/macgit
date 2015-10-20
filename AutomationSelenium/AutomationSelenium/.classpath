@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/monocept/Desktop/weather_app_files/All Jars/jarrrr/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="/Users/monocept/Desktop/weather_app_files/All Jars/jarrrr/poi-3.9.jar"/>
+	<classpathentry kind="lib" path="/Users/monocept/Desktop/weather_app_files/All Jars/jarrrr/poi-ooxml-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="/Users/monocept/Desktop/weather_app_files/All Jars/jarrrr/poi-ooxml-schemas-3.6-20100309.jar"/>
+	<classpathentry kind="lib" path="/Users/monocept/Desktop/weather_app_files/All Jars/jarrrr/sax.jar"/>
+	<classpathentry kind="lib" path="/Users/monocept/Desktop/weather_app_files/All Jars/jarrrr/selenium-server-standalone-2.47.1.jar"/>
+	<classpathentry kind="lib" path="/Users/monocept/Desktop/weather_app_files/All Jars/jarrrr/xmlbeans-2.5.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
